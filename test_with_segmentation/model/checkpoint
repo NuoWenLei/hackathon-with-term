@@ -1,2 +1,0 @@
-model_checkpoint_path: "fish_segmentation_model"
-all_model_checkpoint_paths: "fish_segmentation_model"
