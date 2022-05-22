@@ -8,11 +8,11 @@ UNET = u_net(2, (256, 256, 3), 45, base_filters = 16)
 
 UNET.load_weights("model/fish_segmentation_model")
 
-app = FastAPI(title='Deploying an Image Segmentation Model with FastAPI')
+app = FastAPI(title='Fish Segmentation')
 
 @app.get("/")
 async def home():
-    return "Congratulations! Your API is working as expected. Now head over to http://localhost:8000/docs."
+    return "Docs: http://localhost:8000/docs."
 
 @app.post("/predict")
 async def prediction(file: UploadFile = File(...)):
